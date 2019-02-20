@@ -81,6 +81,7 @@ class ParallaxSwiper extends Component {
       progressBarThickness,
       progressBarBackgroundColor,
       progressBarValueBackgroundColor,
+      handleScroll
     } = this.props;
 
     return (
@@ -99,6 +100,7 @@ class ParallaxSwiper extends Component {
           }}
           horizontal={!vertical}
           pagingEnabled
+          onScroll={handleScroll}
           scrollEventThrottle={1}
           onScroll={Animated.event(
             [
